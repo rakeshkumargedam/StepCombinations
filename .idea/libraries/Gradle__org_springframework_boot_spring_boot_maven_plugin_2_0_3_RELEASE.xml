@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-maven-plugin:2.0.3.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-maven-plugin/2.0.3.RELEASE/13e87fd92f24b5a4611b9e861a49f42b9fcf3a57/spring-boot-maven-plugin-2.0.3.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-maven-plugin/2.0.3.RELEASE/f7ab1be341374481b99bcc589fa2bc477909ad1e/spring-boot-maven-plugin-2.0.3.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

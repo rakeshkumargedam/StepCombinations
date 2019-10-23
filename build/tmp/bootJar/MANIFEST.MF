@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Start-Class: com.sirusxm.com.CombinationApplication
+Start-Class: com.sample.code.test.com.CombinationApplication
 Main-Class: org.springframework.boot.loader.JarLauncher
 

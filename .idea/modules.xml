@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StepCombinations.iml" filepath="$PROJECT_DIR$/.idea/modules/StepCombinations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StepCombinations.main.iml" filepath="$PROJECT_DIR$/.idea/modules/StepCombinations.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StepCombinations.test.iml" filepath="$PROJECT_DIR$/.idea/modules/StepCombinations.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/test/test.iml" filepath="$PROJECT_DIR$/src/test/test.iml" />
     </modules>
