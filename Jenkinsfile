@@ -23,13 +23,32 @@ pipeline {
         }
         stage('gradle_clean') {
             steps {
-                 echo "************ Gradle Build Started **********"
+                 echo "************ Gradle Clean Started **********"
                 withGradle {
                     bat "gradle clean"
+                }
+                echo "************ Gradle Clean Completed **********"
+
+            }
+        }
+       stage('gradle_build') {
+            steps {
+                 echo "************ Gradle Build Started **********"
+                withGradle {
+                    bat "gradle build"
                 }
                 echo "************ Gradle Build Completed **********"
 
             }
         }
+       stage('docker_test') {
+            steps {
+                 echo "************ Docker Test Started **********"
+
+                    bat "docker info"
+                echo "************ Docker  test Completed **********"
+
+            }
+        }        
     }
 }
