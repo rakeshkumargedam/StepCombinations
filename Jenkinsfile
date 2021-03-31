@@ -41,14 +41,5 @@ pipeline {
 
             }
         }
-       stage('docker_test') {
-            steps {
-                 echo "************ Docker Test Started **********"
-
-                    bat "docker info"
-                echo "************ Docker  Test Completed **********"
-
-            }
-       }          
-  
+       
     
