@@ -49,5 +49,5 @@ pipeline {
                 echo "************ Docker  test Completed **********"
 
             }
-        }          
+       }          
   
