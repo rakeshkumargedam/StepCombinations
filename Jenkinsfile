@@ -10,7 +10,7 @@ pipeline {
 
             }
         }
-        stage('build) {
+        stage(build) {
               steps { 
                   withmaven {
                       bat "mvn install"
