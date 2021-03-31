@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('clean') {
             steps {
                 echo "Test Message"
                 withMaven {
@@ -10,5 +10,12 @@ pipeline {
 
             }
         }
+        stage('build) {
+              steps { 
+                  withmaven {
+                      bat "mvn install"
+                  }
+              }
+              }
     }
 }
