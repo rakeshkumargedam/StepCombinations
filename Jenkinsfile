@@ -46,7 +46,7 @@ pipeline {
                  echo "************ Docker Test Started **********"
 
                     bat "docker info"
-                echo "************ Docker  test Completed **********"
+                echo "************ Docker  Test Completed **********"
 
             }
        }          
