@@ -50,5 +50,11 @@ pipeline {
 
             }
         }        
-    }
-}
+   stage('docker_login') {
+            steps {
+                 echo "************ Docker Login Started **********"
+
+                    bat "docker login"
+                echo "************ Docker  Login Completed **********"
+            }
+        }
