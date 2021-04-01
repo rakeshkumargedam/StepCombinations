@@ -48,5 +48,6 @@ pipeline {
                     bat "docker info"
                 echo "************ Docker  Test Completed **********"
 
-            }
-       }          
+             }
+         }          
+    }
