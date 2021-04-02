@@ -56,5 +56,10 @@ pipeline {
                 bat "docker login --username=sitaramjiamit --password=devopsamit"
             }
         }
-    }
+        stage( 'docker_build') {
+            steps {
+            scho "***************Docker build Started ***************"
+                bat "docker build "
+                
+       }
 }
