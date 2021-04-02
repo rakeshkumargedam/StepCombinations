@@ -65,5 +65,13 @@ pipeline {
                 
              }
         }
+        stage( 'docker_push') {
+            steps {
+            echo "***************Docker push Started ***************"
+                bat "docker push sitaramjiamit "
+            echo "***************Docker push Completed ***************"
+
+             }
+        }
     }
 }
