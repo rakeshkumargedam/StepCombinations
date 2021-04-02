@@ -60,7 +60,7 @@ pipeline {
         stage( 'docker_build') {
             steps {
             echo "***************Docker build Started ***************"
-                bat "docker build -t sitaramjiamit"
+                bat "docker build -t sitaramjiamit ."
             echo "***************Docker build Completed ***************"
                 
              }
