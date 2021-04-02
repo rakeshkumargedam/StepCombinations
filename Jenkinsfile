@@ -55,6 +55,6 @@ pipeline {
             echo "****************** Docker login Started ****************"
                 bat "docker login --username=sitaramjiamit --password=devopsamit"
             }
-        
+        }
     }
 }
