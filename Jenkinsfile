@@ -59,7 +59,9 @@ pipeline {
         stage( 'docker_build') {
             steps {
             scho "***************Docker build Started ***************"
-                bat "docker build "
+                bat "docker build -t sitaramjiamit"
                 
-       }
+             }
+        }
+    }
 }
