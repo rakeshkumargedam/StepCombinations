@@ -60,7 +60,7 @@ pipeline {
         stage( 'docker_build') {
             steps {
             echo "***************Docker build Started ***************"
-                bat "docker build -t sitaramjiamit ."
+                bat "docker build -t sitaramjiamit/dockertest:step_1.0.0 ."
             echo "***************Docker build Completed ***************"
                 
              }
@@ -68,7 +68,7 @@ pipeline {
         stage( 'docker_push') {
             steps {
             echo "***************Docker push Started ***************"
-                bat "docker push sitaramjiamit "
+                bat "docker push sitaramjiamit/dockertest:step_1.0.0 "
             echo "***************Docker push Completed ***************"
 
              }
