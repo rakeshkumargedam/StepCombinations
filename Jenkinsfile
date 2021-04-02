@@ -49,6 +49,12 @@ pipeline {
                 echo "************ Docker  Test Completed **********"
 
              }
-         }          
+         }
+        stage('docker_login') {
+            steps {
+            echo "****************** Docker login Started ****************"
+                bat "docker login --username=sitaramjiamit --password=devopsamit"
+            }
+        
     }
 }
