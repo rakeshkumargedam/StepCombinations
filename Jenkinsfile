@@ -1,8 +1,8 @@
 pipeline {
     agent any
     stages {
-        stage ('maven_clean')
-        stage ('maven_build') {
+        stage ('maven_clean') {
+        stage ('maven_build') 
             steps {
                 echo "************ Maven Clean  Started **********"
                 echo "************ Maven Build Started ***********"
