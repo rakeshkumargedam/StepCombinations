@@ -1,23 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('maven_clean') {
+        stage('maven_clean')('maven_build') {
             steps {
-                echo "************ Maven Clean Started **********"
+                echo "************ Maven Clean Build Started **********"
                 withMaven {
                     bat "mvn clean"
                 }
-                echo "************ Maven Clean Completed **********"
-
-            }
-        }
-        stage('maven_build') {
-            steps {
-                 echo "************ Maven Build Started **********"
-                withMaven {
-                    bat "mvn clean"
-                }
-                echo "************ Maven Build Completed **********"
+                echo "************ Maven Clean Build Completed **********
 
             }
         }
