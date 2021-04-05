@@ -11,6 +11,7 @@ pipeline {
                     bat "mvn build"
                 }
                 echo "************ Maven Clean Completed *********
+                echo "************ Maven Build Completed *********
                 
             }
         }
