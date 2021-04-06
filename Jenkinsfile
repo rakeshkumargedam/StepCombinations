@@ -37,7 +37,10 @@ pipeline {
 				echo "***************Docker push Started ***************"
 					bat "docker push sitaramjiamit/dockertest:step_1.0.0 "
 				echo "***************Docker push Completed ***************"
-
+				echo "*************** Docker logs Started ****************"
+				     bat "docker logs sitaramjiamit/dockertest:step_1.0.0 "
+                echo "**************** Docker logs Started ***************"
+				
              }
 
 		}
