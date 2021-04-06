@@ -40,6 +40,12 @@ pipeline {
 				echo "*************** Docker logs Started ****************"
 				     bat "docker logs 79e10d57c1d8 "
                 echo "**************** Docker logs Started ***************"
+				echo "*************** Docker Run Started ****************"
+				     bat "docker Run -d 79e10d57c1d8 "
+                echo "**************** Docker Run Started ***************"
+				echo "*************** Docker Exec Started ****************"
+				     bat "docker exec -it  79e10d57c1d8 bash "
+                echo "**************** Docker Exec Started ***************"
 				
              }
 
