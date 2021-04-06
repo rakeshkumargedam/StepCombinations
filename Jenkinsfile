@@ -43,8 +43,7 @@ pipeline {
 				echo "*************** Docker Run Started ****************"
 				     bat "docker Run  79e10d57c1d8 "
                 echo "**************** Docker Run Started ***************"
-				
-					
+						
              }
 
 		}
