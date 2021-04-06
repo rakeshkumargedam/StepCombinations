@@ -1,43 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('maven_clean') {
+        stage('maven') {
             steps {
                 echo "************ Maven Clean Started **********"
                 withMaven {
-                    bat "mvn clean"
+                    bat "mvn clean install "
                 }
                 echo "************ Maven Clean Completed **********"
 
             }
         }
-        stage('maven_build') {
-            steps {
-                 echo "************ Maven Build Started **********"
-                withMaven {
-                    bat "mvn clean"
-                }
-                echo "************ Maven Build Completed **********"
-
-            }
-        }
-        stage('gradle_clean') {
+        stage('gradle') {
             steps {
                  echo "************ Gradle Clean Started **********"
                 withGradle {
-                    bat "gradle clean"
+                    bat "gradle clean build"
                 }
                 echo "************ Gradle Clean Completed **********"
-
-            }
-        }
-       stage('gradle_build') {
-            steps {
-                 echo "************ Gradle Build Started **********"
-                withGradle {
-                    bat "gradle build"
-                }
-                echo "************ Gradle Build Completed **********"
 
             }
         }
@@ -47,31 +27,19 @@ pipeline {
 
                     bat "docker info"
                 echo "************ Docker  Test Completed **********"
+				
+				echo "****************** Docker login Started ****************"
+					bat "docker login --username=sitaramjiamit --password=devopsamit"
+				echo "****************** Docker login Completed ****************"
+				echo "***************Docker build Started ***************"
+					bat "docker build -t sitaramjiamit/dockertest:step_1.0.0 ."
+				echo "***************Docker build Completed ***************"
+				echo "***************Docker push Started ***************"
+					bat "docker push sitaramjiamit/dockertest:step_1.0.0 "
+				echo "***************Docker push Completed ***************"
 
              }
-         }
-        stage('docker_login') {
-            steps {
-            echo "****************** Docker login Started ****************"
-                bat "docker login --username=sitaramjiamit --password=devopsamit"
-            echo "****************** Docker login Completed ****************"
-            }
-        }
-        stage( 'docker_build') {
-            steps {
-            echo "***************Docker build Started ***************"
-                bat "docker build -t sitaramjiamit/dockertest:step_1.0.0 ."
-            echo "***************Docker build Completed ***************"
-                
-             }
-        }
-        stage( 'docker_push') {
-            steps {
-            echo "***************Docker push Started ***************"
-                bat "docker push sitaramjiamit/dockertest:step_1.0.0 "
-            echo "***************Docker push Completed ***************"
 
-             }
-        }
+		}
     }
 }
