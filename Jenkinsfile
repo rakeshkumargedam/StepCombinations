@@ -40,9 +40,10 @@ pipeline {
 				echo "***************Docker push Completed ***************"
 				echo "*************** Docker logs Started ****************"
 				script {
-				  currentImage = bat(docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet)
+				  currentImage = bat "docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
 				  }
 				  echo currentImage
+				  echo %currentImage%
                 echo "**************** Docker logs Completed  ***************"
 						
              }
