@@ -40,7 +40,7 @@ pipeline {
 				echo "***************Docker push Completed ***************"
 				echo "*************** Docker logs Started ****************"
 				script {
-				  currentImage = bat "lable: get image id, returnStdout:true, script:docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
+				  currentImage = bat "lable: 'get image id', returnStdout:true, script:docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
 				  }
 				  echo currentImage
 				  echo "%currentImage%"
