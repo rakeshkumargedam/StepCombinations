@@ -44,8 +44,8 @@ pipeline {
 				echo "*************** Docker logs Started ****************"
 				 image_id = bat "docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
                 echo "**************** Docker logs Completed ***************"
-				echo ${image_id}
-				echo %image_id%
+				echo "****** Image id is ${image_id}"
+				echo "****** Image id 1 is %image_id%********"
 						
              }
 
