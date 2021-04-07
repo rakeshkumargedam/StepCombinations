@@ -38,7 +38,7 @@ pipeline {
 					bat "docker push sitaramjiamit/dockertest:step_2.0.0 "
 				echo "***************Docker push Completed ***************"
 				echo "*************** Docker logs Started ****************"
-				     bat "docker images --filter=""reference=sitaramjiamit/dockertest:step_1.0.0"" --quiet "
+				     bat "docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
                 echo "**************** Docker logs Completed ***************"
 						
              }
