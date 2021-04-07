@@ -23,6 +23,7 @@ pipeline {
         }
        stage('docker_test') {
             steps {
+			var image_id 
                  echo "************ Docker Test Started **********"
 
                     bat "docker info"
@@ -38,8 +39,9 @@ pipeline {
 					bat "docker push sitaramjiamit/dockertest:step_2.0.0 "
 				echo "***************Docker push Completed ***************"
 				echo "*************** Docker logs Started ****************"
-				     bat "docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
+				 image_id = bat "docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
                 echo "**************** Docker logs Completed ***************"
+				echo image_id 
 						
              }
 
