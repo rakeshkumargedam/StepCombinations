@@ -7,8 +7,9 @@ agent any
                 withMaven {
                     bat "mvn clean install "
                 }
-				stdout = bat "returnStdout:true, script: 'docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet'"
+				stdout = bat "returnStdout:true, script: docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
                 echo "************ Maven Clean Completed **********"
+				println ("stdout ###########" + stdout + "############)
 
             }
         }
