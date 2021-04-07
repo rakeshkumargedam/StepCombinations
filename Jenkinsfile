@@ -1,3 +1,6 @@
+
+
+def image_id = ""
 pipeline {
     agent any
     stages {
@@ -23,7 +26,7 @@ pipeline {
         }
        stage('docker_test') {
             steps {
-			var image_id 
+			 
                  echo "************ Docker Test Started **********"
 
                     bat "docker info"
@@ -41,7 +44,8 @@ pipeline {
 				echo "*************** Docker logs Started ****************"
 				 image_id = bat "docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
                 echo "**************** Docker logs Completed ***************"
-				echo image_id 
+				echo ${image_id}
+				echo %image_id%
 						
              }
 
