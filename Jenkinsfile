@@ -39,7 +39,7 @@ pipeline {
 					bat "docker push sitaramjiamit/dockertest:step_2.0.0 "
 				echo "***************Docker push Completed ***************"
 				echo "*************** Docker logs Started ****************"
-				 def image_id = bat "docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
+				 image_id = bat "docker images --filter=reference=sitaramjiamit/dockertest:step_2.0.0 --quiet"
                 echo "**************** Docker logs Completed ***************"
 				echo "****** Image id is ${image_id}"
 				echo "****** Image id 1 is %image_id%********"
