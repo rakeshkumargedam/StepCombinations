@@ -32,17 +32,14 @@ pipeline {
 					bat "docker login --username=sitaramjiamit --password=devopsamit"
 				echo "****************** Docker login Completed ****************"
 				echo "***************Docker build Started ***************"
-					bat "docker build -t sitaramjiamit/dockertest:step_1.0.0 ."
+					bat "docker build -t sitaramjiamit/dockertest:step_2.0.0 ."
 				echo "***************Docker build Completed ***************"
 				echo "***************Docker push Started ***************"
-					bat "docker push sitaramjiamit/dockertest:step_1.0.0 "
+					bat "docker push sitaramjiamit/dockertest:step_2.0.0 "
 				echo "***************Docker push Completed ***************"
 				echo "*************** Docker logs Started ****************"
-				     bat "docker logs 79e10d57c1d8 "
-                echo "**************** Docker logs Started ***************"
-				echo "*************** Docker Run Started ****************"
-				     bat "docker Run -d 34003724ee36 "
-                echo "**************** Docker Run Started ***************"
+				     bat "docker images --filter="reference=sitaramjiamit/dockertest:step_1.0.0" --quiet "
+                echo "**************** Docker logs Completed ***************"
 						
              }
 
