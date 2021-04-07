@@ -1,5 +1,5 @@
 node {
-    stages {
+
         stage('maven') {
             steps {
                 echo "************ Maven Clean Started **********"
@@ -11,6 +11,6 @@ node {
 
             }
         }
-		}
+		
 		}
 
